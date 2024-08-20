@@ -35,7 +35,7 @@ const ScheduleManager = () => {
   useEffect(() => {
     const fetchSchedules = async () => {
       try {
-        const { data } = await axios.get('http://localhost:5000/api/schedules');
+        const { data } = await axios.get('https://automated-reporting-data-export-and.onrender.com/api/schedules');
         setSchedules(data);
       } catch (error) {
         console.error(error);

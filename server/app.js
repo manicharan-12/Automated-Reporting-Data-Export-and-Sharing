@@ -11,7 +11,14 @@ const app = express();
 connectDB();
 
 app.use(express.json());
-app.use(cors())
+//http://localhost:3000
+app.use(
+    cors({
+      origin: "https://automated-reporting-data-export-and-sharing.vercel.app",
+      methods: ["GET", "POST", "PUT", "DELETE"],
+      credentials: true,
+    })
+  );
 
 app.use('/api/reports', reportRoutes);
 app.use('/api/schedules', scheduleRoutes);

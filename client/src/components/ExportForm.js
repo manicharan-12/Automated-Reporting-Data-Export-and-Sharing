@@ -39,7 +39,7 @@ const ExportForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      await axios.post('http://localhost:5000/api/exports', data);
+      await axios.post('https://automated-reporting-data-export-and.onrender.com/api/exports', data);
       alert('Report exported successfully');
     } catch (error) {
       console.error(error);

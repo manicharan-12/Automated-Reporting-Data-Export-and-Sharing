@@ -39,7 +39,7 @@ const ScheduleForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      await axios.post('http://localhost:5000/api/schedules', {
+      await axios.post('https://automated-reporting-data-export-and.onrender.com/api/schedules', {
         ...data,
         recipients: data.recipients.split(','),
       });
